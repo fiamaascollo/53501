@@ -1,0 +1,7 @@
+prueba "Login Exitoso" {
+dado usuario.nombre "admin"
+dado usuario.edad 25
+cuando boton.login es "presionado"
+entonces pagina.home debe "/home"
+entonces mensaje.texto contiene "bienvenido"
+}

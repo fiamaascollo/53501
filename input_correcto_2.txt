@@ -1,0 +1,7 @@
+prueba "Navegacion App" {
+dado usuario.nombre "cliente"
+dado usuario.logueado verdadero
+cuando boton.ingresar es "presionado"
+entonces pagina.dashboard debe "/dashboard"
+entonces mensaje.estado contiene "acceso permitido"
+}

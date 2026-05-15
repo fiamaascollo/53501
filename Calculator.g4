@@ -1,29 +1,18 @@
-grammar Calculator;
+grammar Calculator; 
 
-//Gramatica
-prog: stat+;
+// REGLAS SINTÁCTICAS
+testSuite      : prueba* EOF ;
+prueba         : 'prueba' TEXTO '{' paso* '}' ;
+paso           : ('dado' | 'cuando' | 'entonces') objeto (estado valor)? ('y' valor)* ;
+objeto         : IDENTIFICADOR ('.' IDENTIFICADOR)* ;
+estado         : 'es' | 'no es' | 'contiene' | 'existe' | 'debe' ;
+valor          : TEXTO | NUMERO | BOOLEANO | variable | lista ;
+variable       : '$' IDENTIFICADOR ;
+lista          : '[' valor (',' valor)* ']' ;
 
-stat: expr NEWLINE?              #printExpr
-    | ID EQ expr NEWLINE?        #assign
-    | NEWLINE                   #blank
-    ;
-
-expr: expr op=(MUL|DIV) expr    #MulDiv
-    | expr op=(ADD|SUB) expr    #AddSub
-    | INT                       #int
-    | ID                        #id
-    | LPAREN expr RPAREN        #parens
-    ;
-
-//Lexemas
-MUL : '*';
-DIV : '/';
-ADD : '+';
-SUB : '-';
-EQ: '=';
-ID : [a-zA-Z]+;
-INT : [0-9];
-LPAREN : '(';
-RPAREN : ')';
-NEWLINE:'\r'? '\n';
-WS: [ \t]+ -> skip;
+// REGLAS LÉXICAS
+TEXTO          : '"' (~["])* '"' ;
+NUMERO         : [0-9]+ ;
+BOOLEANO       : 'verdadero' | 'falso' ;
+IDENTIFICADOR  : [a-zA-Z] [a-zA-Z0-9_]* ;
+WS             : [ \t\r\n]+ -> skip ;

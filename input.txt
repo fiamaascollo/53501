@@ -1,8 +1,5 @@
-x = 2 + 3
-y = 3
-z = x + y
-z
-
-
-
-
+prueba "Test de Login" {
+    dado usuario.admin
+    cuando boton.login es "click"
+    entonces home.page debe "mostrar"
+}

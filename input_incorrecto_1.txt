@@ -1,0 +1,4 @@
+prueba "Error Sintaxis" {
+dado usuario.nombre "admin"
+cuando boton.login es "presionado
+entonces pagina.home debe

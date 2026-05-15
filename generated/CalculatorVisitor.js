@@ -1,4 +1,4 @@
-// Generated from c://Users//Mariana//OneDrive - docentes.frm.utn.edu.ar//SSL//2025//ANTLR4//antlr-calculator-project//Calculator.g4 by ANTLR 4.13.2
+// Generated from c:/Users/fiama/ssl-antlr-calculator/Calculator.g4 by ANTLR 4.13.2
 // jshint ignore: start
 import antlr4 from 'antlr4';
 
@@ -6,56 +6,50 @@ import antlr4 from 'antlr4';
 
 export default class CalculatorVisitor extends antlr4.tree.ParseTreeVisitor {
 
-	// Visit a parse tree produced by CalculatorParser#prog.
-	visitProg(ctx) {
+	// Visit a parse tree produced by CalculatorParser#testSuite.
+	visitTestSuite(ctx) {
 	  return this.visitChildren(ctx);
 	}
 
 
-	// Visit a parse tree produced by CalculatorParser#printExpr.
-	visitPrintExpr(ctx) {
+	// Visit a parse tree produced by CalculatorParser#prueba.
+	visitPrueba(ctx) {
 	  return this.visitChildren(ctx);
 	}
 
 
-	// Visit a parse tree produced by CalculatorParser#assign.
-	visitAssign(ctx) {
+	// Visit a parse tree produced by CalculatorParser#paso.
+	visitPaso(ctx) {
 	  return this.visitChildren(ctx);
 	}
 
 
-	// Visit a parse tree produced by CalculatorParser#blank.
-	visitBlank(ctx) {
+	// Visit a parse tree produced by CalculatorParser#objeto.
+	visitObjeto(ctx) {
 	  return this.visitChildren(ctx);
 	}
 
 
-	// Visit a parse tree produced by CalculatorParser#parens.
-	visitParens(ctx) {
+	// Visit a parse tree produced by CalculatorParser#estado.
+	visitEstado(ctx) {
 	  return this.visitChildren(ctx);
 	}
 
 
-	// Visit a parse tree produced by CalculatorParser#MulDiv.
-	visitMulDiv(ctx) {
+	// Visit a parse tree produced by CalculatorParser#valor.
+	visitValor(ctx) {
 	  return this.visitChildren(ctx);
 	}
 
 
-	// Visit a parse tree produced by CalculatorParser#AddSub.
-	visitAddSub(ctx) {
+	// Visit a parse tree produced by CalculatorParser#variable.
+	visitVariable(ctx) {
 	  return this.visitChildren(ctx);
 	}
 
 
-	// Visit a parse tree produced by CalculatorParser#id.
-	visitId(ctx) {
-	  return this.visitChildren(ctx);
-	}
-
-
-	// Visit a parse tree produced by CalculatorParser#int.
-	visitInt(ctx) {
+	// Visit a parse tree produced by CalculatorParser#lista.
+	visitLista(ctx) {
 	  return this.visitChildren(ctx);
 	}
 

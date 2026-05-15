@@ -1,0 +1,6 @@
+prueba "Tokens Invalidos" {
+dado usuario#nombre "admin"
+dado usuario.activo verdad
+cuando sistema.estado es ["online",]
+entonces pagina.home debe "/home"
+}
